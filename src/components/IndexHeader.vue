@@ -75,14 +75,11 @@ div.header{
     justify-content: space-around; 
     align-items: center; 
 
-    ul{
-        display: flex;
-    }
-
     li{
         list-style: none; 
         margin: 1rem; 
-        ;
+        display: inline-block;
+        
 
         :hover{
             color: blue;
