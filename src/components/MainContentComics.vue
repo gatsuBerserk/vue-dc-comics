@@ -1,14 +1,14 @@
 <template>
   <div class="single-card">
-        <img :src="thumb" alt="series">
-        <p>{{ price }} {{ series }}</p>
+        <img :src="comicObject.thumb" alt="comicObject.series">
+        <p>{{ comicObject.price }} {{ comicObject.series }}</p>
   </div>
 </template>
 
 <script>
 export default {
     name:"MainContentsComics",
-    props: ["thumb", "price", "series"]
+    props: ["comicObject"],
 }
 </script>
 

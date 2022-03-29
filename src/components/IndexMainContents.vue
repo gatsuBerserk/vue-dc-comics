@@ -6,9 +6,7 @@
             <MainContentComics
                 v-for="(element, index) in comics" 
                 :key="index"
-                :thumb = "element.thumb"
-                :price = "element.price"
-                :series = "element.series"
+                :comicObject="element"
             />
         </div>
     </div>
