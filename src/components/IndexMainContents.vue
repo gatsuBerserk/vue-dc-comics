@@ -3,18 +3,25 @@
         <section class="main-jumbo"> 
         </section>
         <div class="cards"> 
-            <MainContentComics
-                v-for="(element, index) in comics" 
-                :key="index"
-                :comicObject="element"
-            />
-        </div>
+        <MainContentComics
+            v-for="(element, index) in comics" 
+            :key="index"
+            :comicObject="element"
+        /> 
+        </div> 
+        <button class="btn"> <a href="#">Load More</a> </button>
+        <IndexMainShop/> 
     </div>
 </template>
 
 <script>
 import MainContentComics from "@/components/MainContentComics.vue"
+import IndexMainShop from './IndexMainShop.vue'
 export default { 
+    components:{
+        MainContentComics,
+        IndexMainShop,
+    }, 
     name: "IdexMainContent", 
 
     data : function (){
@@ -95,9 +102,6 @@ export default {
             ]
         }
     }, 
-    components:{
-        MainContentComics,
-    }
     
     }
 
@@ -107,7 +111,28 @@ export default {
 @import "../assets/scss/style.scss"; 
 
     div.wrapper-main{
-        background-color: $secondaryColor;
+        background-color: $secondaryColor; 
+
+        .btn{
+            background-color: $primaryColor;
+            text-transform:uppercase; 
+            font-weight: bold;
+            margin: 1rem; 
+            height: 30px; 
+            width: 150px; 
+            border: transparent;
+
+            a{
+                text-decoration: none;
+                color: whitesmoke; 
+
+                &:hover{
+                    color: yellow;
+                }
+
+
+            }
+        }
     }
     section.main-jumbo{ 
         height: 400px; 

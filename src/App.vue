@@ -2,15 +2,13 @@
   <div id="app">
     <IndexHeader/> 
     <IndexMainContent/> 
-    <IndexMainShop/>  
     <IndexFooter/>
   </div>
 </template>
 
 <script>
   import IndexHeader from "@/components/IndexHeader.vue" 
-  import IndexMainContent from "@/components/IndexMainContents.vue" 
-  import IndexMainShop from "@/components/IndexMainShop.vue" 
+  import IndexMainContent from "@/components/IndexMainContents.vue"  
   import IndexFooter from "@/components/IndexFooter.vue" 
 
 
@@ -19,7 +17,6 @@ export default {
   components: {
     IndexHeader,
     IndexMainContent, 
-    IndexMainShop,
     IndexFooter,
   }
 }
