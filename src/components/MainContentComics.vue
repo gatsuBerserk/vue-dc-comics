@@ -17,5 +17,9 @@ export default {
             width: calc(100% / 6 - (2rem));  
             padding: .5rem; 
             color:whitesmoke; 
+            
+            p{
+              height: 10px;
+            }
         }
 </style>
