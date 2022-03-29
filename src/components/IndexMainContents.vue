@@ -13,7 +13,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
     div.cards{
         background-color: black; 
         height: 100px; 

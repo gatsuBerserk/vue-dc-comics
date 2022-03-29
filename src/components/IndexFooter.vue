@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="wrapper-jumbo">
       <div class="footer-jumbo"> 
             <div class="wrapper">
                 <div class="list"> 
@@ -42,24 +42,26 @@
           <figure>
               <img src="../assets/img/dc-logo-bg.png" alt=" DC Logo">
           </figure> 
-      </div>  
-        <div class="sign-social"> 
-            <button>Sing-up now!</button>
-            <div class="social" >
-                <h4>Follow us</h4> 
-                <!-- non funzionanano png -->
-                <!-- <figure v-for="(element, index) in socials" :key="index">
-                    <img :src="`../src/img` + element.socialImg" :alt="element.text"> 
-                </figure>  --> 
-                <figure>
-                    <img src="../assets/img/footer-facebook.png" alt=""> 
-                    <img src="../assets/img/footer-periscope.png" alt=""> 
-                    <img src="../assets/img/footer-pinterest.png" alt=""> 
-                    <img src="../assets/img/footer-twitter.png" alt=""> 
-                    <img src="../assets/img/footer-youtube.png" alt=""> 
-                </figure> 
-            </div>
-        </div>
+      </div> 
+        <section class="social">  
+            <div class="sign-social"> 
+                <button>Sing-up now!</button>
+                <div class="social" >
+                    <h4>Follow us</h4> 
+                    <!-- non funzionanano png -->
+                    <!-- <figure v-for="(element, index) in socials" :key="index">
+                        <img :src="`../src/img` + element.socialImg" :alt="element.text"> 
+                    </figure>  --> 
+                    <figure>
+                        <img src="../assets/img/footer-facebook.png" alt=""> 
+                        <img src="../assets/img/footer-periscope.png" alt=""> 
+                        <img src="../assets/img/footer-pinterest.png" alt=""> 
+                        <img src="../assets/img/footer-twitter.png" alt=""> 
+                        <img src="../assets/img/footer-youtube.png" alt=""> 
+                    </figure> 
+                </div>
+            </div> 
+        </section>
     </div>
 </template>
 
@@ -206,23 +208,24 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped> 
+@import "../assets/scss/style.scss";
+ div.wrapper-jumbo{
+      background: url("../assets/img/footer-bg.jpg") no-repeat;
+      background-size: 100%; 
 
-    div.footer-jumbo{ 
-        display: flex;  
-        justify-content: space-evenly;
-        align-items: center; 
+        div.footer-jumbo{ 
+        @include container; 
         overflow: hidden;
-        height: 400px;
-        background: url("../assets/img/footer-bg.jpg") no-repeat;  
-        background-size: 100%;
+        height: 400px;  
+        
         .wrapper{
             display: flex;
             justify-content: space-around;
         }
 
         div.list{
-            padding-left: 1.8rem;
+            padding-right: 1.8rem;
         }
 
         h3{
@@ -249,21 +252,19 @@ export default {
         figure img{ 
             height: 600px; 
         }
-    } 
-
-    div.sign-social{ 
-        display: flex; 
-        justify-content: space-evenly; 
-        align-items: center;
+    }  
+    section.social{
         background-color: rgb(48, 48, 48); 
 
+        div.sign-social{ 
+        @include container;
         button{ 
             background-color: transparent; 
             color: white;
             text-transform:uppercase; 
             height: 30px; 
             width: 150px;
-            border: 2px solid rgb(2, 130, 249); 
+            border: 2px solid $primaryColor; 
         } 
 
         div.social{ 
@@ -271,14 +272,21 @@ export default {
             
             h4{
             text-transform: uppercase;
-            color: rgb(2, 130, 249) ;
+            color: $primaryColor ;
         } 
 
-        img{
-            margin-left: 1rem;
-        }
+            img{
+                margin-left: 1rem;
+            }
         } 
             
     }
+
+    }
+
+ }
+    
+
+    
 
 </style>

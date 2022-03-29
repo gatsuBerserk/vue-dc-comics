@@ -1,5 +1,5 @@
 <template>
-    <div> 
+    <div class="wrapper"> 
         <div class="shop">
             <!--Appena finito cambiare con una lista e fare un v-for (ci ho pensato dopo mannaggia, meglio tardi che mai)--> 
             <!-- non funzionano png -->
@@ -75,13 +75,18 @@ export default {
 }
 </script>
 
-<style lang="scss">
-    div.shop{
-        background-color: rgb(2, 130, 249);  
+<style lang="scss" scoped> 
+@import "../assets/scss/style.scss"; 
+    div.wrapper{
+         background-color: $primaryColor;
+    }
+    div.shop{ 
+        @include container;
         height: 100px; 
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
+         
+        // display: flex;
+        // align-items: center;
+        // justify-content: space-evenly;
              
             
            
@@ -92,7 +97,7 @@ export default {
         display: flex; 
         justify-content: space-evenly; 
         align-items: center;
-        padding: 4rem; 
+        padding: 0; 
                 
             img.logos{
             height: 50px; 

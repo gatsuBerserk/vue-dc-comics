@@ -68,12 +68,12 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" scoped> 
+@import "../assets/scss/style.scss";
 
-div.header{
-    display: flex; 
-    justify-content: space-around; 
-    align-items: center; 
+div.header{ 
+    @include container;
+    
 
     li{
         list-style: none; 
@@ -82,7 +82,7 @@ div.header{
         
 
         :hover{
-            color: blue;
+            color: $primaryColor;
         }
     } 
 

@@ -1,0 +1,9 @@
+$primaryColor: rgb(2, 130, 249); 
+
+@mixin container{
+    width: 75%; 
+    margin: 0 auto; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
