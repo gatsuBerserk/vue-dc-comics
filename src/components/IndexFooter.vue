@@ -245,8 +245,13 @@ export default {
         }
 
         a{
-            color: yellow;
-            text-decoration: none;
+            color: silver; 
+            opacity: .5;
+            text-decoration: none; 
+
+            &:hover{
+                color: yellow;
+            }
         }
 
         figure img{ 

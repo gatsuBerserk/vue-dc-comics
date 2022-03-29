@@ -1,35 +1,12 @@
 <template>
     <div class="wrapper"> 
         <div class="shop">
-            <!--Appena finito cambiare con una lista e fare un v-for (ci ho pensato dopo mannaggia, meglio tardi che mai)--> 
-            <!-- non funzionano png -->
             <div class="shop-card" v-for="(element, index) in shopIcon" :key="index"> 
                 <a href="#"> 
                     <img class="logos" :src="require(`@/assets/img/${element.shopImg}`)" :alt="element.text"> 
                     {{element.text}}
                 </a>
-                
             </div> 
-            <!-- <div class="shop-cards">
-                <img class="logos" src="../assets/img/buy-comics-digital-comics.png" alt="Digital Store"> 
-                <p> Digital Store</p> 
-            </div>
-            <div class="shop-cards">
-                <img class="logos" src="../assets/img/buy-comics-merchandise.png" alt=" Digitl Store"> 
-                <p>Mercandise</p>
-            </div>
-            <div class="shop-cards">
-                <img class="logos" src="../assets/img/buy-comics-shop-locator.png" alt=" Digitl Store"> 
-                <p>Sub</p>
-            </div>
-            <div class="shop-cards">
-                <img class="logos" src="../assets/img/buy-comics-subscriptions.png" alt=" Digitl Store"> 
-                <p>locator</p>
-            </div>
-            <div class="shop-cards">
-                <img class="logos" src="../assets/img/buy-dc-power-visa.svg" alt=" Digitl Store"> 
-                <a href="#"><p>power</p></a>
-            </div>  -->
         </div>
     </div>
 </template>
@@ -104,7 +81,7 @@ export default {
                 align-items: center;
                 margin-left: 1rem ; 
                 text-decoration: none; 
-                color: black; 
+                color: whitesmoke; 
                 font-weight:bolder; 
                 text-transform: uppercase;
                 

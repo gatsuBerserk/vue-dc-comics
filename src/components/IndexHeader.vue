@@ -73,6 +73,7 @@ export default {
 
 div.header{ 
     @include container;
+    padding-bottom: 1rem;
     
 
     li{
